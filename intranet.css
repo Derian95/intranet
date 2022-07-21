@@ -1,0 +1,281 @@
+@font-face {
+    font-family: Roboto;
+    src: url('./font//roboto/Roboto-Regular.ttf');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    height: 100vh;
+}
+h1 {
+    margin: 0;
+}
+
+.container {
+    background-color: rebeccapurple;
+    height: 100%;
+}
+
+/*HEADER*/
+.menu {
+    list-style: none;
+    display: none;
+}
+.menu2:hover{
+    cursor: pointer;
+}
+.menu2:checked{
+    background-color: rebeccapurple;
+}
+
+
+.header {
+    color: white;
+    background-color: #102368;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    flex-shrink: 0;
+    width: 100%;
+    border-bottom: #eca815 solid 4px;
+}
+.headerFix {
+    flex-shrink: 0;
+    height: 60px;
+}
+.header h1 {
+    margin-left: 25px;
+}
+.info {
+    display: flex;
+}
+.reloj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.reloj ion-icon {
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+    background-color: #08133a;
+    border-radius: 100%;
+    padding: 5px;
+}
+.usuarioInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.usuarioInfo ion-icon {
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+    background-color: #08133a;
+    border-radius: 100%;
+    padding: 5px;
+}
+.usuarioSalir {
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.usuarioSalir:hover {
+    cursor: pointer;
+    color: #eca815;
+}
+.usuarioSalir ion-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+    background-color: #08133a;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+/**************************/
+
+.contain {
+    display: flex;
+    height: 100%;
+}
+
+/*SIDEBAR*/
+.navFix {
+    width: 200px;
+    flex-shrink: 0;
+}
+.nav {
+    width: 200px;
+    padding: 0;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    background-color: #102368;
+    overflow-y: scroll;
+}
+.listNav {
+    padding: 0;
+    margin: 0;
+}
+.listNav li {
+    height: 40px;
+    border-bottom: 1px solid #eca815;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    color: white;
+    transition: all 0.5s;
+    font-size: 15px;
+}
+
+.listNav li:hover {
+    background-color: #08133a;
+    cursor: pointer;
+    color: #eca815;
+}
+.listNav li span {
+    margin-left: 10px;
+}
+.listNav li ion-icon {
+    margin-left: 10px;
+    width: 22px;
+    height: 22px;
+}
+/********************************************/
+
+/*INFORMACION*/
+.information {
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #08133a;
+    border-bottom: #eca815 3px solid;
+    padding: 10px;
+}
+.preguntas {
+    margin-top: 10px;
+    border-bottom: #eca815 2px solid;
+    padding: 10px;
+}
+
+.accesos {
+    margin-top: 10px;
+    border-bottom: #eca815 2px solid;
+    padding: 10px;
+}
+
+.economia {
+    margin-top: 10px;
+    border-bottom: #eca815 2px solid;
+    padding: 10px;
+}
+
+/***********************************/
+
+/* FOOTER*/
+footer {
+    margin-top: 20px;
+}
+.footerInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonGenerar {
+    background-color: #102368;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    width: 250px;
+}
+.botonGenerar:hover {
+    cursor: pointer;
+    color: #eca815;
+}
+
+.botonGenerar ion-icon {
+    height: 70px;
+    width: 70px;
+}
+
+/************/
+
+.active {
+    width: 200px;
+}
+
+.close {
+    width: 0;
+}
+
+@media (max-width: 700px) {
+    .header {
+        height: 100px;
+        padding: 15px;
+        flex-direction: column;
+    }
+    .headerFix {
+        height: 110px;
+        height: 17;
+    }
+    .nav {
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: -100%;
+        top: 135px;
+        transition: all 1s;
+    }
+    .navFix {
+        width: 0;
+    }
+    .information {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .tituloInfo {
+        font-size: 15px;
+    }
+    .footerInfo {
+        flex-direction: column;
+    }
+    .botonGenerar {
+        width: 100%;
+        padding: 0;
+        height: 100px;
+    }
+    .menu {
+        display: block;
+        width: 100%;
+        right: 0;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .nav-menu_visible {
+        left: 0;
+        transition: all 1s;
+
+    }
+}
